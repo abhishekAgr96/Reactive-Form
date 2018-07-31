@@ -1,19 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <form [formGroup]="myFormGroup" >
+<h1>Sign Up</h1> 
+<form [formGroup]="myFormGroup" >
     <label>
     <input type="text" placeholder="First Name" formControlName="fname">
-    <span *ngIf="!myFormGroup.controls['fname'].valid">here</span><br/>
+    <span *ngIf="!myFormGroup.controls['fname'].valid">Only Charectors</span><br/>
     </label>
     <input type="text" placeholder="Last Name" formControlName="lname">
-    <span *ngIf="!myFormGroup.controls['lname'].valid">here</span><br/>
+    <span *ngIf="!myFormGroup.controls['lname'].valid">*Only Charectors</span><br/>
     <input type="text" placeholder="Gender" formControlName="gender">
-    <span *ngIf="!myFormGroup.controls['gender'].valid">here</span><br/>
+    <span *ngIf="!myFormGroup.controls['gender'].valid">*required</span><br/>
     <input type="text" placeholder="Contact No." formControlName="contactNo">
-    <span *ngIf="!myFormGroup.controls['contactNo'].valid">here</span><br/>
+    <span *ngIf="!myFormGroup.controls['contactNo'].valid">*Only 10 digit No.</span><br/>
     <input type="text" placeholder="Password" formControlName="password">
-    <span *ngIf="!myFormGroup.controls['password'].valid">here</span><br/>
+    <span *ngIf="!myFormGroup.controls['password'].valid">*required</span><br/>
     <input type="text" placeholder="Confirm Password" formControlName="confirmPassword">
-    <span *ngIf="!myFormGroup.controls['confirmPassword'].valid">here</span><br/>
+    <span *ngIf="!myFormGroup.controls['password'].valid">*required</span><br/>
+    <input type="text" placeholder="Employee ID" formControlName="empId">
+    <span *ngIf="!myFormGroup.controls['empId'].valid">*Only 4 digits</span><br/>
     <button type="submit"  >Sign Up</button>
   </form>
   <!-- [disabled]="!myFormGroup.valid" -->
